@@ -16,18 +16,18 @@
     <div class="nav__inner">
       <a href="index.html" class="nav__logo" aria-label="DevScan – Home">
         <div class="nav__logo-icon" aria-hidden="true">
-          <svg width="16" height="18" viewBox="0 0 16 18" fill="none" aria-hidden="true"><path d="M8 0L0 3.27V9c0 4.14 3.4 8.02 8 9 4.6-.98 8-4.86 8-9V3.27L8 0z" fill="white" fill-opacity=".9"/><line x1="5" y1="9" x2="11" y2="9" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="6" x2="8" y2="12" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg width="16" height="18" viewBox="0 0 16 18" fill="none"><path d="M8 0L0 3.27V9c0 4.14 3.4 8.02 8 9 4.6-.98 8-4.86 8-9V3.27L8 0z" fill="white" fill-opacity=".9"/><line x1="5" y1="9" x2="11" y2="9" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="6" x2="8" y2="12" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
         DevScan
       </a>
       <ul class="nav__links" role="list">
-        <li><a href="index.html" class="nav__link" aria-current="page">Home</a></li>
-        <li><a href="#features" class="nav__link">Features</a></li>
-        <li><a href="#pricing" class="nav__link">Pricing</a></li>
-        <li><a href="about.html" class="nav__link">About</a></li>
-        <li><a href="license.html" class="nav__link">License</a></li>
+        <li><a href="index.html"         class="nav__link" aria-current="page">Home</a></li>
+        <li><a href="#features"          class="nav__link">Features</a></li>
+        <li><a href="#pricing"           class="nav__link">Pricing</a></li>
+        <li><a href="about.html"         class="nav__link">About</a></li>
+        <li><a href="license.html"       class="nav__link">License</a></li>
         <li><a href="accessibility.html" class="nav__link">Accessibility</a></li>
-        <li><a href="impressum.html" class="nav__link">Contact</a></li>
+        <li><a href="impressum.html"     class="nav__link">Contact</a></li>
       </ul>
       <div class="nav__actions">
         <a href="#" class="btn btn--ghost btn--sm">Log in</a>
@@ -40,10 +40,10 @@
   </nav>
 
   <nav class="nav__mobile" id="nav-mobile" aria-hidden="true" aria-label="Mobile navigation">
-    <a href="index.html" class="nav__link">Home</a>
-    <a href="#features"  class="nav__link">Features</a>
-    <a href="#pricing"   class="nav__link">Pricing</a>
-    <a href="about.html" class="nav__link">About</a>
+    <a href="index.html"         class="nav__link" aria-current="page">Home</a>
+    <a href="#features"          class="nav__link">Features</a>
+    <a href="#pricing"           class="nav__link">Pricing</a>
+    <a href="about.html"         class="nav__link">About</a>
     <a href="license.html"       class="nav__link">License</a>
     <a href="privacy.html"       class="nav__link">Privacy</a>
     <a href="accessibility.html" class="nav__link">Accessibility</a>
@@ -56,9 +56,10 @@
 
   <main id="main-content">
 
-    <!-- Hero -->
+    <!-- ── Hero ───────────────────────────────────────────────── -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero__inner">
+
         <div class="hero__content">
           <div class="hero__badge" aria-label="New: CI/CD integration available">
             <span class="hero__badge-dot" aria-hidden="true"></span>
@@ -81,7 +82,7 @@
         </div>
 
         <!-- Code window mockup -->
-        <div class="code-window" role="img" aria-label="Screenshot of DevScan detecting a hardcoded credential and SQL injection vulnerability in example code">
+        <div class="code-window" role="img" aria-label="DevScan detecting a hardcoded credential and SQL injection vulnerability in example source code">
           <div class="code-window__bar" aria-hidden="true">
             <span class="dot dot--r"></span>
             <span class="dot dot--y"></span>
@@ -91,50 +92,51 @@
           <div class="code-window__body" aria-hidden="true">
             <div class="cl"><span class="cl-n">1</span><span class="cl-t"><span class="tk-kw">import</span> db <span class="tk-kw">from</span> <span class="tk-str">'./db'</span></span></div>
             <div class="cl"><span class="cl-n">2</span><span class="cl-t"></span></div>
-            <div class="cl cl--danger"><span class="cl-n">3</span><span class="cl-t"><span class="tk-kw">const</span> <span class="tk-var">SECRET</span> = <span class="tk-str">"ghp_k9xM3nPw2..."</span> <span class="badge badge--crit">CRITICAL</span></span></div>
+            <div class="cl cl--danger"><span class="cl-n">3</span><span class="cl-t"><span class="tk-kw">const</span> <span class="tk-var">SECRET</span> = <span class="tk-str">"ghp_k9xM3nPw2qR..."</span><span class="badge badge--crit">CRITICAL</span></span></div>
             <div class="cl cl--danger"><span class="cl-n">4</span><span class="cl-t"><span class="tk-cm">// Hardcoded credential exposed in source</span></span></div>
             <div class="cl"><span class="cl-n">5</span><span class="cl-t"></span></div>
             <div class="cl"><span class="cl-n">6</span><span class="cl-t"><span class="tk-kw">async function</span> <span class="tk-fn">getUser</span>(id) {</span></div>
-            <div class="cl cl--warn"><span class="cl-n">7</span><span class="cl-t">  <span class="tk-kw">return</span> db.<span class="tk-fn">query</span>(<span class="tk-str">`SELECT * WHERE id=${</span>id<span class="tk-str">}`</span>) <span class="badge badge--high">HIGH</span></span></div>
+            <div class="cl cl--warn"><span class="cl-n">7</span><span class="cl-t">  <span class="tk-kw">return</span> db.<span class="tk-fn">query</span>(<span class="tk-str">`SELECT * WHERE id=<span style="color:var(--tk-var,#F78C6C)">${id}</span>`</span>)<span class="badge badge--high">HIGH</span></span></div>
             <div class="cl cl--warn"><span class="cl-n">8</span><span class="cl-t">  <span class="tk-cm">// SQL injection via unsanitized input</span></span></div>
             <div class="cl"><span class="cl-n">9</span><span class="cl-t">}</span></div>
           </div>
           <div class="scan-bar" aria-hidden="true">
             <div class="issue-counts">
               <span class="ic ic--c">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" fill="white" font-size="13" font-weight="bold">!</text></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" fill="white" font-size="13" font-weight="bold" font-family="sans-serif">!</text></svg>
                 1 Critical
               </span>
               <span class="ic ic--h">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
                 1 High
               </span>
               <span class="ic ic--l">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                 2 Low
               </span>
             </div>
             <span style="color:var(--c-accent);font-weight:600;font-size:.72rem;">✓ Scan complete</span>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Trusted by -->
-    <div class="section--alt" style="padding-block:28px;border-top:1px solid var(--c-border);">
+    <!-- ── Trusted by ──────────────────────────────────────────── -->
+    <div class="section--alt" style="padding-block:24px;border-top:1px solid var(--c-border);">
       <div class="container text-center">
-        <p style="font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c-text-faint);margin:0 auto 20px;">Trusted by development teams at</p>
-        <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;align-items:center;opacity:.5;filter:grayscale(1);">
-          <span style="font-family:var(--font-mono);font-weight:700;font-size:1.05rem;color:var(--c-text);">Aurum Labs</span>
-          <span style="font-family:var(--font-mono);font-weight:700;font-size:1.05rem;color:var(--c-text);">CoreStack</span>
-          <span style="font-family:var(--font-mono);font-weight:700;font-size:1.05rem;color:var(--c-text);">ByteForge</span>
-          <span style="font-family:var(--font-mono);font-weight:700;font-size:1.05rem;color:var(--c-text);">Nexora</span>
-          <span style="font-family:var(--font-mono);font-weight:700;font-size:1.05rem;color:var(--c-text);">Pulsifi</span>
+        <p style="font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;color:var(--c-text-faint);margin:0 auto 18px;">Trusted by development teams at</p>
+        <div style="display:flex;flex-wrap:wrap;gap:36px;justify-content:center;align-items:center;opacity:.45;filter:grayscale(1);" aria-hidden="true">
+          <span style="font-family:var(--font-mono);font-weight:700;font-size:1rem;">Aurum Labs</span>
+          <span style="font-family:var(--font-mono);font-weight:700;font-size:1rem;">CoreStack</span>
+          <span style="font-family:var(--font-mono);font-weight:700;font-size:1rem;">ByteForge</span>
+          <span style="font-family:var(--font-mono);font-weight:700;font-size:1rem;">Nexora</span>
+          <span style="font-family:var(--font-mono);font-weight:700;font-size:1rem;">Pulsifi</span>
         </div>
       </div>
     </div>
 
-    <!-- Features -->
+    <!-- ── Features ───────────────────────────────────────────── -->
     <section class="section" id="features" aria-labelledby="features-heading">
       <div class="container">
         <div class="section-header">
@@ -149,7 +151,7 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <h3>SAST Scanning</h3>
-            <p>Static analysis catches injection flaws, hardcoded secrets, broken authentication, and 50+ other vulnerability classes — all without running your code.</p>
+            <p>Static analysis catches injection flaws, hardcoded secrets, broken authentication, and 50+ other vulnerability classes — without running your code.</p>
           </article>
 
           <article class="feature-card">
@@ -165,7 +167,7 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             </div>
             <h3>CI/CD Integration</h3>
-            <p>One-line setup for GitHub Actions, GitLab CI, Bitbucket Pipelines, and Jenkins. Block PRs that introduce new critical issues.</p>
+            <p>One-line setup for GitHub Actions, GitLab CI, Bitbucket Pipelines, and Jenkins. Block PRs that introduce new critical issues automatically.</p>
           </article>
 
           <article class="feature-card">
@@ -181,7 +183,7 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <h3>Secret Detection</h3>
-            <p>Finds API keys, tokens, passwords, and private keys before they're committed. Supports 120+ secret patterns across all major providers.</p>
+            <p>Finds API keys, tokens, passwords, and private keys before they're committed. Supports 120+ secret patterns across all major cloud providers.</p>
           </article>
 
           <article class="feature-card">
@@ -196,7 +198,7 @@
       </div>
     </section>
 
-    <!-- How it works -->
+    <!-- ── How it works ───────────────────────────────────────── -->
     <section class="section section--alt" id="how-it-works" aria-labelledby="hiw-heading">
       <div class="container">
         <div class="section-header">
@@ -209,7 +211,7 @@
             <div class="step-num" aria-hidden="true">1</div>
             <div>
               <h3>Connect your repository</h3>
-              <p>Authorize DevScan with GitHub, GitLab, or Bitbucket. We only request the permissions we need — and we never store your code.</p>
+              <p>Authorize DevScan with GitHub, GitLab, or Bitbucket. We only request the permissions we need — and we never store your source code.</p>
             </div>
           </div>
           <div class="step">
@@ -230,7 +232,7 @@
       </div>
     </section>
 
-    <!-- Pricing -->
+    <!-- ── Pricing ────────────────────────────────────────────── -->
     <section class="section" id="pricing" aria-labelledby="pricing-heading">
       <div class="container">
         <div class="section-header">
@@ -244,77 +246,37 @@
           <article class="pricing-card" aria-labelledby="plan-free">
             <p class="pricing-name" id="plan-free">Free</p>
             <div class="pricing-price">
-              <span class="cur">€</span>
-              <span class="amt">0</span>
-              <span class="per">/month</span>
+              <span class="cur">€</span><span class="amt">0</span><span class="per">/month</span>
             </div>
             <p class="pricing-desc">Perfect for solo developers and open-source projects.</p>
             <div class="pricing-div"></div>
             <ul class="pricing-feats" aria-label="Free plan features">
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                1 repository
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                100 scans / month
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                SAST &amp; secret detection
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Community support
-              </li>
-              <li class="pricing-feat pricing-feat--off">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                Dependency analysis
-              </li>
-              <li class="pricing-feat pricing-feat--off">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                CI/CD integration
-              </li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>1 repository</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>100 scans / month</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SAST &amp; secret detection</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Community support</li>
+              <li class="pricing-feat pricing-feat--off"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Dependency analysis</li>
+              <li class="pricing-feat pricing-feat--off"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>CI/CD integration</li>
             </ul>
             <a href="#" class="btn btn--ghost">Get started free</a>
           </article>
 
-          <!-- Pro (featured) -->
+          <!-- Pro -->
           <article class="pricing-card pricing-card--featured" aria-labelledby="plan-pro" aria-describedby="plan-pro-badge">
             <div class="pricing-pill" id="plan-pro-badge">Most popular</div>
             <p class="pricing-name" id="plan-pro">Pro</p>
             <div class="pricing-price">
-              <span class="cur">€</span>
-              <span class="amt">12</span>
-              <span class="per">/month</span>
+              <span class="cur">€</span><span class="amt">12</span><span class="per">/month</span>
             </div>
             <p class="pricing-desc">For professional developers and small teams who ship production software.</p>
             <div class="pricing-div"></div>
             <ul class="pricing-feats" aria-label="Pro plan features">
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <strong>Unlimited</strong>&nbsp;repositories
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <strong>Unlimited</strong>&nbsp;scans
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                SAST, secrets &amp; dependency analysis
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                CI/CD &amp; Slack integration
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Priority email support
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                AI-powered fix suggestions
-              </li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><strong>Unlimited</strong>&nbsp;repositories</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><strong>Unlimited</strong>&nbsp;scans</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SAST, secrets &amp; dependency analysis</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>CI/CD &amp; Slack integration</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Priority email support</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI-powered fix suggestions</li>
             </ul>
             <a href="#" class="btn btn--primary">Start Pro trial</a>
           </article>
@@ -323,54 +285,36 @@
           <article class="pricing-card" aria-labelledby="plan-team">
             <p class="pricing-name" id="plan-team">Team</p>
             <div class="pricing-price">
-              <span class="cur">€</span>
-              <span class="amt">49</span>
-              <span class="per">/month</span>
+              <span class="cur">€</span><span class="amt">49</span><span class="per">/month</span>
             </div>
             <p class="pricing-desc">For growing engineering teams with compliance and reporting needs.</p>
             <div class="pricing-div"></div>
             <ul class="pricing-feats" aria-label="Team plan features">
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Everything in Pro
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Up to 10 seats
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Admin dashboard &amp; RBAC
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Compliance reports (SOC 2, OWASP)
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                SSO &amp; audit logs
-              </li>
-              <li class="pricing-feat">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Dedicated support manager
-              </li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Everything in Pro</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Up to 10 seats</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Admin dashboard &amp; RBAC</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Compliance reports (SOC 2, OWASP)</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SSO &amp; audit logs</li>
+              <li class="pricing-feat"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dedicated support manager</li>
             </ul>
             <a href="impressum.html" class="btn btn--ghost">Contact sales</a>
           </article>
 
         </div>
-        <p class="text-center text-muted mt-8" style="font-size:.875rem;">All plans include a 14-day free trial. <a href="license.html" style="color:var(--c-primary);">View full license terms →</a></p>
+        <p class="text-center text-muted mt-8" style="font-size:.875rem;">
+          All plans include a 14-day free trial. <a href="license.html" style="color:var(--c-primary);">View full license terms →</a>
+        </p>
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- ── CTA Banner ─────────────────────────────────────────── -->
     <section class="section" aria-labelledby="cta-heading">
       <div class="container">
         <div class="cta-banner">
           <h2 id="cta-heading">Start scanning your code today</h2>
           <p>Join thousands of developers who ship with confidence. Set up in under two minutes.</p>
           <div class="cta-actions">
-            <a href="#" class="btn btn--primary btn--lg" style="background:#fff;color:var(--c-primary-dark);">Get started free</a>
+            <a href="#" class="btn btn--lg" style="background:#fff;color:var(--c-primary-dark);font-weight:700;">Get started free</a>
             <a href="impressum.html" class="btn btn--ghost btn--lg">Talk to us</a>
           </div>
         </div>
@@ -379,14 +323,14 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="nav__logo" style="font-size:1.1rem;">
             <div class="nav__logo-icon" style="width:26px;height:26px;" aria-hidden="true">
-              <svg width="13" height="15" viewBox="0 0 16 18" fill="none" aria-hidden="true"><path d="M8 0L0 3.27V9c0 4.14 3.4 8.02 8 9 4.6-.98 8-4.86 8-9V3.27L8 0z" fill="white" fill-opacity=".9"/><line x1="5" y1="9" x2="11" y2="9" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="6" x2="8" y2="12" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <svg width="13" height="15" viewBox="0 0 16 18" fill="none"><path d="M8 0L0 3.27V9c0 4.14 3.4 8.02 8 9 4.6-.98 8-4.86 8-9V3.27L8 0z" fill="white" fill-opacity=".9"/><line x1="5" y1="9" x2="11" y2="9" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="6" x2="8" y2="12" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
             DevScan
           </a>
@@ -438,7 +382,7 @@
       Cookie-Einstellungen
     </h3>
     <p id="cookie-desc">
-      We use cookies to analyze site usage and improve your experience. Analytics data is anonymized and stays on our servers. Read our <a href="privacy.html">Datenschutzerklärung</a> for details.
+      We use cookies to analyze site usage and improve your experience. Analytics data is anonymized. See our <a href="privacy.html">Datenschutzerklärung</a> for details.
     </p>
     <div class="cookie-actions">
       <button class="btn btn--primary btn--sm" id="cookie-accept">Accept all</button>
