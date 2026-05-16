@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevScan Accessibility Statement – our commitment to WCAG 2.2 AA conformance and how to report issues.">
+  <title>Accessibility – DevScan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="DevScan – Home">
+        <div class="nav__logo-icon" aria-hidden="true">
+          <svg width="16" height="18" viewBox="0 0 16 18" fill="none"><path d="M8 0L0 3.27V9c0 4.14 3.4 8.02 8 9 4.6-.98 8-4.86 8-9V3.27L8 0z" fill="white" fill-opacity=".9"/><line x1="5" y1="9" x2="11" y2="9" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="6" x2="8" y2="12" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        DevScan
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"          class="nav__link">Home</a></li>
+        <li><a href="index.html#features" class="nav__link">Features</a></li>
+        <li><a href="index.html#pricing"  class="nav__link">Pricing</a></li>
+        <li><a href="about.html"          class="nav__link">About</a></li>
+        <li><a href="license.html"        class="nav__link">License</a></li>
+        <li><a href="accessibility.html"  class="nav__link" aria-current="page">Accessibility</a></li>
+        <li><a href="impressum.html"      class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="#" class="btn btn--ghost btn--sm">Log in</a>
+        <a href="index.html#pricing" class="btn btn--primary btn--sm">Get started</a>
+        <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="nav__mobile" id="nav-mobile" aria-hidden="true" aria-label="Mobile navigation">
+    <a href="index.html"          class="nav__link">Home</a>
+    <a href="index.html#features" class="nav__link">Features</a>
+    <a href="index.html#pricing"  class="nav__link">Pricing</a>
+    <a href="about.html"          class="nav__link">About</a>
+    <a href="license.html"        class="nav__link">License</a>
+    <a href="privacy.html"        class="nav__link">Privacy</a>
+    <a href="accessibility.html"  class="nav__link" aria-current="page">Accessibility</a>
+    <a href="impressum.html"      class="nav__link">Contact / Imprint</a>
+    <div style="display:flex;gap:8px;padding:12px 0 4px;border-top:1px solid var(--c-border);margin-top:8px;">
+      <a href="#" class="btn btn--ghost btn--sm" style="flex:1;justify-content:center;">Log in</a>
+      <a href="index.html#pricing" class="btn btn--primary btn--sm" style="flex:1;justify-content:center;">Get started</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <header class="page-hero">
+      <div class="container">
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Accessibility</span>
+        </nav>
+        <h1>Accessibility Statement</h1>
+        <p class="page-hero__meta">Last reviewed: 1 May 2025 · NexScan GmbH</p>
+      </div>
+    </header>
+
+    <div class="legal-content">
+
+      <!-- Conformance badge -->
+      <div class="conformance-badge" role="note" aria-label="Conformance status: WCAG 2.2 Level AA">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        <div>
+          <strong>WCAG 2.2 Level AA – Partially Conformant</strong>
+          <span>We are committed to meeting all Level AA success criteria. Known exceptions are listed below.</span>
+        </div>
+      </div>
+
+      <h2>1. Commitment to accessibility</h2>
+      <p>NexScan GmbH is committed to making the DevScan website accessible to as many people as possible, regardless of technology or ability. We aim to meet the <strong>Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA</strong>, published by the World Wide Web Consortium (W3C).</p>
+      <p>These guidelines explain how to make web content more accessible to people with disabilities, including users who rely on screen readers, keyboard navigation, or other assistive technologies.</p>
+
+      <h2>2. Measures taken</h2>
+      <p>We have implemented the following accessibility measures across all pages of this website:</p>
+
+      <h3>Perceivable</h3>
+      <ul>
+        <li>All non-text content (icons, graphics, SVG illustrations) has a text alternative via <code>alt</code> attributes or <code>aria-label</code>. Purely decorative elements are hidden from assistive technologies using <code>aria-hidden="true"</code>.</li>
+        <li>Color is never used as the sole means of conveying information — all states (error, success, disabled) are also communicated via text or icons.</li>
+        <li>Text contrast ratios meet or exceed <strong>4.5:1</strong> for normal text and <strong>3:1</strong> for large text and UI components, verified against WCAG 2.2 Success Criterion 1.4.3.</li>
+        <li>Text can be resized up to 200% without loss of content or functionality.</li>
+        <li>No content flashes more than three times per second (no risk of photosensitive seizures).</li>
+      </ul>
+
+      <h3>Operable</h3>
+      <ul>
+        <li>All interactive elements — navigation links, buttons, form fields, and the cookie banner — are fully keyboard-operable using <kbd>Tab</kbd>, <kbd>Enter</kbd>, and <kbd>Escape</kbd>.</li>
+        <li>A visible <strong>skip-to-content</strong> link is provided at the top of every page, allowing keyboard users to bypass the navigation bar.</li>
+        <li>Focus indicators are visible on all interactive elements.</li>
+        <li>No time limits are imposed on any interaction on this website.</li>
+        <li>Page titles are unique and descriptive on every page.</li>
+      </ul>
+
+      <h3>Understandable</h3>
+      <ul>
+        <li>The language of each page is declared via the <code>lang="en"</code> attribute on the <code>&lt;html&gt;</code> element.</li>
+        <li>Navigation is consistent across all pages.</li>
+        <li>All form inputs have a visible, programmatically associated <code>&lt;label&gt;</code>. Required fields are identified both visually and via <code>aria-required="true"</code>.</li>
+        <li>Error messages (e.g., in the contact form) identify the field in error and describe how to fix it.</li>
+      </ul>
+
+      <h3>Robust</h3>
+      <ul>
+        <li>HTML is written to be valid and semantic, using elements such as <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;article&gt;</code> to convey document structure.</li>
+        <li>ARIA landmarks and roles are used where native HTML semantics are insufficient.</li>
+        <li>The cookie banner and mobile menu are implemented as accessible dialogs with appropriate <code>role</code>, <code>aria-modal</code>, and <code>aria-hidden</code> attributes.</li>
+        <li>The website is tested with keyboard-only navigation and the WAVE and axe DevTools browser extensions.</li>
+      </ul>
+
+      <h2>3. Known limitations</h2>
+      <p>While we strive for full WCAG 2.2 AA conformance, the following known limitations exist. We are actively working to resolve them:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Page / Component</th>
+            <th scope="col">Issue</th>
+            <th scope="col">WCAG criterion</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Contact form</td>
+            <td>Inline error messages are not yet implemented; required field validation relies on the browser's native UI, which varies in accessibility across assistive technologies.</td>
+            <td>3.3.1 Error Identification (A)</td>
+            <td>Planned fix: Q3 2025</td>
+          </tr>
+          <tr>
+            <td>Code window (hero)</td>
+            <td>The code mockup is presented as a static image-like block. Although an <code>aria-label</code> provides a text description, the content is not exposed as structured text to screen readers.</td>
+            <td>1.1.1 Non-text Content (A)</td>
+            <td>Workaround in place (aria-label); full fix planned</td>
+          </tr>
+          <tr>
+            <td>External links</td>
+            <td>Some external links do not explicitly announce that they open in a new tab. This will be addressed by adding visible and accessible indicators.</td>
+            <td>3.2.2 On Input (A)</td>
+            <td>Planned fix: Q3 2025</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. Technical specifications</h2>
+      <p>The accessibility of this website relies on the following technologies:</p>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>WAI-ARIA 1.2</li>
+      </ul>
+      <p>These technologies are relied upon for conformance. The website is tested in the latest versions of Chrome, Firefox, and Safari on desktop and mobile.</p>
+
+      <h2>5. Assessment approach</h2>
+      <p>NexScan GmbH assessed the accessibility of this website through the following methods:</p>
+      <ul>
+        <li>Self-evaluation using the <a href="https://wave.webaim.org/" target="_blank" rel="noopener">WAVE Web Accessibility Evaluation Tool</a></li>
+        <li>Automated testing using the <a href="https://www.deque.com/axe/devtools/" target="_blank" rel="noopener">axe DevTools</a> browser extension</li>
+        <li>Manual keyboard-only navigation testing</li>
+        <li>Manual review against the WCAG 2.2 success criteria checklist</li>
+      </ul>
+
+      <h2>6. Feedback and contact</h2>
+      <p>We welcome your feedback on the accessibility of the DevScan website. If you experience any barriers or have suggestions for improvement, please contact us:</p>
+      <ul>
+        <li>By email: <strong>accessibility@devscan.io</strong></li>
+        <li>By phone: <strong>+43 1 234 5678</strong> (Mon–Fri, 09:00–17:00 CET)</li>
+        <li>Via our <a href="impressum.html">contact form</a></li>
+      </ul>
+      <p>We aim to respond to accessibility feedback within <strong>5 business days</strong>.</p>
+
+      <h2>7. Enforcement</h2>
+      <p>If you are not satisfied with our response to your accessibility feedback, you may contact the Austrian supervisory authority:</p>
+      <p>
+        <strong>Austrian Regulatory Authority for Broadcasting and Telecommunications (RTR)</strong><br>
+        Mariahilfer Straße 77–79, 1060 Vienna, Austria<br>
+        Website: <a href="https://www.rtr.at" target="_blank" rel="noopener">www.rtr.at</a>
+      </p>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="font-size:1.1rem;">
+            <div class="nav__logo-icon" style="width:26px;height:26px;" aria-hidden="true">
+              <svg width="13" height="15" viewBox="0 0 16 18" fill="none"><path d="M8 0L0 3.27V9c0 4.14 3.4 8.02 8 9 4.6-.98 8-4.86 8-9V3.27L8 0z" fill="white" fill-opacity=".9"/><line x1="5" y1="9" x2="11" y2="9" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="6" x2="8" y2="12" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            DevScan
+          </a>
+          <p>Automated code security analysis for modern development teams.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#how-it-works">How it works</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="impressum.html">Contact</a></li>
+            <li><a href="about.html#credits">Credits</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="license.html">License</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="impressum.html">Imprint</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 NexScan GmbH · Vienna, Austria · FN 123456a HG Wien</p>
+        <div class="footer__legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="license.html">License</a>
+          <a href="impressum.html">Imprint</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
