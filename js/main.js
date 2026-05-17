@@ -35,31 +35,43 @@ document.querySelectorAll('.nav__link[href], .nav__mobile a[href]').forEach(link
 });
 
 /* ── Cookie banner ──────────────────────────────────────────── */
-const cookieBanner  = document.getElementById('cookie-banner');
-const cookieAccept  = document.getElementById('cookie-accept');
-const cookieReject  = document.getElementById('cookie-reject');
-const cookieManage  = document.getElementById('cookie-manage-link');
+const banner = document.createElement('div');
+banner.id = 'cookie-banner';
+banner.className = 'cookie-banner';
+banner.setAttribute('role', 'dialog');
+banner.setAttribute('aria-modal', 'true');
+banner.setAttribute('aria-labelledby', 'cookie-title');
+banner.setAttribute('aria-describedby', 'cookie-desc');
+banner.innerHTML = `
+  <h3 id="cookie-title">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:6px;" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    Cookie Settings
+  </h3>
+  <p id="cookie-desc">We use cookies to analyze site usage and improve your experience. Analytics data is anonymized. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+  <div class="cookie-actions">
+    <button class="btn btn--primary btn--sm" id="cookie-accept">Accept all</button>
+    <button class="btn btn--ghost btn--sm" id="cookie-reject">Reject optional</button>
+  </div>`;
+document.body.appendChild(banner);
 
-if (cookieBanner) {
-  if (!localStorage.getItem('ds-cookie-consent')) {
-    setTimeout(() => cookieBanner.classList.add('is-visible'), 800);
-  }
-  const dismiss = choice => {
-    localStorage.setItem('ds-cookie-consent', choice);
-    cookieBanner.classList.remove('is-visible');
-  };
-  cookieAccept?.addEventListener('click', () => dismiss('accepted'));
-  cookieReject?.addEventListener('click', () => dismiss('rejected'));
+const dismiss = choice => {
+  localStorage.setItem('ds-cookie-consent', choice);
+  banner.classList.remove('is-visible');
+};
+document.getElementById('cookie-accept').addEventListener('click', () => dismiss('accepted'));
+document.getElementById('cookie-reject').addEventListener('click', () => dismiss('rejected'));
+
+if (!localStorage.getItem('ds-cookie-consent')) {
+  setTimeout(() => banner.classList.add('is-visible'), 800);
 }
 
+const cookieManage = document.getElementById('cookie-manage-link');
 if (cookieManage) {
   cookieManage.addEventListener('click', e => {
     e.preventDefault();
     localStorage.removeItem('ds-cookie-consent');
-    if (cookieBanner) {
-      cookieBanner.classList.add('is-visible');
-      cookieBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
+    banner.classList.add('is-visible');
+    banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 }
 
